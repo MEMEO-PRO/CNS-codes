@@ -1,18 +1,4 @@
-def caesar_cipher_encrypt(text, shift):
-   
-    result = ""
-    for char in text:
-        if char.islower():
-            ascii_offset = ord('a')
-            shifted_char = chr((ord(char) - ascii_offset + shift) % 26 + ascii_offset)
-            result += shifted_char
-        elif char.isupper():
-            ascii_offset = ord('A')
-            shifted_char = chr((ord(char) - ascii_offset + shift) % 26 + ascii_offset)
-            result += shifted_char
-        else:
-            result += char
-    return result
+
 
 def caesar_cipher_encrypt(text, shift):
     """
@@ -76,9 +62,4 @@ print("Original text: ", text)
 print("Encrypted text: ", encrypted_text)
 print("Decrypted text: ", decrypted_text)
 
-text = "NOTVERYSECURE"
-shift = 7
-encrypted_text = caesar_cipher_encrypt(text, shift)
 
-print("Original text: ", text)
-print("Encrypted text: ", encrypted_text)
